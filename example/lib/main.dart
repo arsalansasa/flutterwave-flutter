@@ -176,21 +176,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _handlePaymentInitialization() async {
     final flutterwave = Flutterwave.forUIPayment(
-      amount: this.amountController.text.toString().trim(),
-      currency: this.currencyController.text,
-      context: this.context,
-      publicKey: this.publicKeyController.text.trim(),
-      encryptionKey: this.encryptionKeyController.text.trim(),
-      email: this.emailController.text.trim(),
-      fullName: "Test User",
-      txRef: DateTime.now().toIso8601String(),
-      narration: "Example Project",
-      isDebugMode: this.isDebug,
-      phoneNumber: this.phoneNumberController.text.trim(),
-      acceptAccountPayment: true,
-      acceptCardPayment: true,
-      acceptUSSDPayment: true
-    );
+        amount: this.amountController.text.toString().trim(),
+        currency: this.currencyController.text,
+        context: this.context,
+        publicKey: this.publicKeyController.text.trim(),
+        encryptionKey: this.encryptionKeyController.text.trim(),
+        email: this.emailController.text.trim(),
+        fullName: "Test User",
+        txRef: DateTime.now().toIso8601String(),
+        narration: "Example Project",
+        isDebugMode: this.isDebug,
+        phoneNumber: this.phoneNumberController.text.trim(),
+        acceptAccountPayment: true,
+        acceptCardPayment: true,
+        acceptUSSDPayment: true);
     final response = await flutterwave.initializeForUiPayments();
     if (response != null) {
       this.showLoading(response.data.status);

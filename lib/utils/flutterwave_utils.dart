@@ -4,7 +4,7 @@ import 'package:flutterwave/utils/flutterwave_currency.dart';
 import 'package:tripledes_nullsafety/tripledes_nullsafety.dart';
 
 class FlutterwaveUtils {
-  static putIfNotNull(Map map, String key, String? value) {
+  static putIfNotNull(map, key, value) {
     if (value == null || value is String && value.isEmpty) return;
     map[key] = value;
   }
