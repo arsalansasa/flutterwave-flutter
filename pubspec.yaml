@@ -1,0 +1,29 @@
+name: "flutterwave"
+description: "Flutterwave official flutter library to accept payment via card, USSD, Mobile Money etc."
+version: 1.0.1
+homepage: "https://github.com/Flutterwave/flutterwave-flutter"
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^0.13.0
+  tripledes_nullsafety: ^1.0.1
+  webview_flutter: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  mockito: ^5.0.15
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: FLW
+      fonts:
+        - asset: fonts/FLW-Regular.ttf
+        - asset: fonts/FLW-Bold.ttf
